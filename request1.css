@@ -49,7 +49,9 @@ body{
     width: 1239px;
     height:620px;
     float: right;
-    margin: 0px 20px 0px 0px;
+    margin: 0px 20px 0px -60px;
+    position: relative;
+    
 }
 .button{
     margin: 0px 140px 30px 1020px;
@@ -69,3 +71,6 @@ body{
     border: 1px solid gray;
     box-shadow: .5px  .5px 0px 0px ;
   }
+  .login{
+    text-decoration-line: underline;
+}
