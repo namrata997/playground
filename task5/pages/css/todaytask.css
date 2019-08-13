@@ -73,7 +73,7 @@ header{
     /* align-items: center; */
     width: 1400px;
     /* align-content: center; */
-    margin: auto;
+    /* margin: auto; */
     font-family: 'roboto';
     /* font-weight: 500; */
     margin: 0px 0px 0px 80px;
@@ -81,8 +81,48 @@ header{
 .content2{
     background-color: whitesmoke;
     width: 1400px;
-    margin: auto;
+    /* margin: auto; */
     font-family: 'roboto';
     margin: 0px 0px 0px 80px;
-    text-decoration-line: underline;
+    /* text-decoration-line: underline; */
+}
+.content3{
+    background-color: whitesmoke;
+    width: 1400px;
+    /* margin: auto; */
+    font-family: 'roboto';
+    margin: 20px 0px 0px 90px;  
+}
+.content4{
+    display: flex;
+    flex-direction: column;
+    /* background: #fff; */
+    /* align-items: flex-start; */
+    justify-content: space-evenly;
+    width: 70px;
+    height: 620px;
+    float: left;
+    margin: 0px 0px 0px -70px;  
+}
+.flex-note{
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke;
+    width: auto;
+    height:auto;
+    float: left;
+    margin: 75px 0px 0px 30px;
+    align-items: flex-start;
+    /* justify-content: space-evenly; */
+}
+.flex-note1{
+    display: flex;
+    flex-direction: column;
+    background: rgb(88, 48, 139);
+    width: auto;
+    height:auto;
+    float: left;
+    margin: 25px 0px 0px 0px;
+    /* align-items: flex-start; */
+    /* justify-content: space-evenly; */
 }
