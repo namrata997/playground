@@ -1,0 +1,212 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: whitesmoke;
+    /* background-color: white; */
+    /* font-family: 'roboto'; */
+    /* font-weight: 500; */
+}
+
+.flex-head{
+    margin: 0px 0px 0px 20px;  
+}
+.abc{
+    background-color: white;  
+}
+
+.flex-profile{
+    float:right;
+    margin: -40px 20px 0px 0px;
+}
+.right1{
+    display: flex;
+    align-items: flex-end;
+    background-color: white;
+}
+.image{
+    border-radius: 50px;
+    background-color: white;
+    margin: 0px 5px 0px 0px;
+    
+}
+.name{
+ padding-bottom: 4px;
+ background-color: white;
+ font-family: 'roboto';
+ font-weight: 500;
+ margin: 0px 10px 0px 0px;
+}
+.imagedrop{
+    padding-bottom: 6px;
+    background-color: white;
+    margin: 0px 50px 0px 0px;
+}
+.menuimg{
+    margin-left: 2%;
+    background-color: white;
+}
+
+.request{
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 0.5%;
+    font-family: 'roboto';
+    font-weight: 500;
+}
+
+.search{
+    box-shadow: 0px 2px 2px 2px #DFEBEF;
+    border-radius: 25px;
+    border: 3px solid #B5B5B5;
+    width: 600px;
+    padding: 10px;  
+    font-family: 'roboto';
+    font-weight: 500;
+}
+.search input{
+    border: none;
+    outline: none;
+}
+.search img{
+    float: right;
+    position: relative;
+}
+
+.button{
+    /* width: 120%; */
+    /* margin-right: 300%; */
+    background-color: #32BDD2;
+    color: #f1f1f1;
+    padding: 7px 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: 'roboto';
+    font-weight: 500;
+}
+.image1{
+    float: left;
+}
+.filter{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    margin: auto;
+    width: 1200px;
+    padding: 10px;
+    font-family: 'roboto';
+    font-weight: 500;
+}
+.content1{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    width: 1200px;
+    /* align-content: center; */
+    margin: auto;
+    font-family: 'roboto';
+    font-weight: 500;
+}
+.dot1 {
+    height: 15px;
+    width: 15px;
+    background-color:yellow;
+    border-radius: 60%;
+    display: inline-block;
+  }
+.not1{
+    margin-left: 65px;
+}
+
+  .content2{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    width: 1200px;
+    /* align-content: center; */
+    margin: auto;
+    font-family: 'roboto';
+    font-weight: 500;
+  }
+  .dot2 {
+    height: 15px;
+    width: 15px;
+    background-color:green;
+    border-radius: 60%;
+    display: inline-block;
+  }
+    
+    .content3{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    width: 1200px;
+    /* align-content: center; */
+    margin: auto;
+    font-family: 'roboto';
+    font-weight: 500;
+}
+.dot3 {
+    height: 15px;
+    width: 15px;
+    background-color:goldenrod;
+    border-radius: 60%;
+    display: inline-block;
+  }
+  .not3{
+    margin-right: 25px;
+}
+
+.content4{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    width: 1200px;
+    /* align-content: center; */
+    margin: auto;
+    /* margin-bottom: 5%; */
+    font-family: 'roboto';
+    font-weight: 500;
+}
+.dot4 {
+    height: 15px;
+    width: 15px;
+    background-color:red;
+    border-radius: 60%;
+    display: inline-block;
+  }
+
+.content5{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    /* align-content: center; */
+    justify-content: center;
+    width: 1200px;
+    /* align-content: center; */
+    margin: auto;
+    font-family: 'roboto';
+    font-weight: 500;
+    height: 20%;
+}
+
+.imagedrop1{
+    padding-bottom: 0px;
+    background-color: white;
+}
