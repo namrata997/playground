@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login-Page</title>
+    <link rel="stylesheet" type="text/css" href="../css/1loginpage.css">
+</head>
+
+<body class="bdy">
+    <form>
+        <!--<div class="All">-->
+        <div class="pack">
+            <div class="login"><span>LOGIN</span></div>
+            <div class="user">
+                <p>Email or username</p>
+                <input type="text" id="tb" required>
+            </div>
+            <div class="password">
+                <p>Password</p>
+                <input type="password" id="tbp" required>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" name="Remember-me" id="yes"> remember me
+            </div>
+            <div class="forgot-pass">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="forgotpassword.html">forgot password?</a>
+            </div><br><br><br>
+            <div class="login1">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="button" type="submit" onclick="init()">Login</button>
+            </div>
+        </div>
+        <!--</div>-->
+    </form>
+</body>
+<script>
+    function init() {
+        location.replace("fieldriquired.html");
+    }
+    console.log("move to login1 page");
+</script>
+
+</html>
