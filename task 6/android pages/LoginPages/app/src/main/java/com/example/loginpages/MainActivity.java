@@ -31,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                i1.setVisibility(1);
-                i2.setVisibility(1);
-                i3.setVisibility(1);
-                i4.setVisibility(1);
+                i1.setVisibility(View.VISIBLE);
+                i2.setVisibility(View.VISIBLE);
+                i3.setVisibility(View.VISIBLE);
+                i4.setVisibility(View.VISIBLE);
+
             }
 
             });
