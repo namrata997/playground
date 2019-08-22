@@ -16,13 +16,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class Navigationactivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     ListPopupWindow listPopupWindow;
     ImageView filter;
-    TextView popUp;
+    ListView listView;
+//    TextView popUp;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,11 +56,20 @@ public class Navigationactivity extends AppCompatActivity
         filter = findViewById(R.id.imageView9);
         String[] conent_list = {"Clear","Approval","Draft","Reject","Awaiting"};
         listPopupWindow = new ListPopupWindow(getApplicationContext());
-        listPopupWindow.setAdapter(new ArrayAdapter(getApplicationContext(),R.layout.dropdown,conent_list));
-        listPopupWindow.setAnchorView(popUp);
+        listPopupWindow.setAdapter(new ArrayAdapter<>(getApplicationContext(),R.layout.dropdown,conent_list));
+        listPopupWindow.setAnchorView(filter);
         listPopupWindow.setModal(true);
 
-        popUp.setOnClickListener(new View.OnClickListener() {
+
+        listView=findViewById(R.id.box);
+        String title[]={"PUR-056-2019","PUR-057-2019","PUR-058-2019","PUR-059-2019"};
+        String date[]={"22-Aug","24-Aug","28-Aug","30-Aug"};
+        String verification[]={"APPROVED","REJECTED","DRAFT","AWAITING"};
+
+        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),title,date,verification);
+        listView.setAdapter(listAdapter);
+
+        filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 listPopupWindow.show();

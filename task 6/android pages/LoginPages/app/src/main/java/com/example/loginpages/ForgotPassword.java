@@ -23,16 +23,23 @@ public class ForgotPassword extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
+
+
+
         contiue=findViewById(R.id.button2);
         alertBuilding=new AlertDialog.Builder( this);
         final View alertView=getLayoutInflater().inflate(R.layout.activity_alertmessage,null);
         alertBuilding.setView(alertView);
         final AlertDialog alertDialog=alertBuilding.create();
+
+
         a1=findViewById(R.id.imageView4);
         a2=findViewById(R.id.imageView5);
         a3=findViewById(R.id.textView8);
         a4=findViewById(R.id.textView9);
         email=findViewById(R.id.editText3);
+
+
         contiue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,10 +48,6 @@ public class ForgotPassword extends AppCompatActivity {
                 a2.setVisibility(View.VISIBLE);
                 a3.setVisibility(View.VISIBLE);
                 a4.setVisibility(View.VISIBLE);
-            }
-            else if (email.getText().toString().equals("nammu")){
-                Intent intent=new Intent(getApplicationContext(),Navigationactivity.class);
-                startActivity(intent);
             }
             else{
                 alertBuilding.show();
