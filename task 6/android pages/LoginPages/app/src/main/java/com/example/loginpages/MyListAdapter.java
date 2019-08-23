@@ -36,7 +36,7 @@ public class MyListAdapter extends BaseAdapter {
         TextView title,date,verification;
         title=view.findViewById(R.id.title);
         date=view.findViewById(R.id.date);
-        verification=view.findViewById(R.id.verification);
+        verification=view.findViewById(R.id.textView20);
 
         title.setText(String.valueOf(titles[position]));
         date.setText(String.valueOf(dates[position]));
