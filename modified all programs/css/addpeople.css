@@ -1,0 +1,27 @@
+body{
+    margin: 5px;
+    padding: 5px;
+}
+.pack{
+    display: flex;
+    border-radius: 5%;
+    background-color: white ;
+    width: 50%;
+    height: 60%;
+    top: 20%;
+    position: relative;
+    margin: 0 auto;
+    align-self:center;
+    justify-content: space-between;
+
+}
+.image{
+    border-radius: 50px;
+    background-color: white;
+    margin: 0px 5px 0px 0px;
+    float: right;
+}
+.login{
+    float: left;
+}
+

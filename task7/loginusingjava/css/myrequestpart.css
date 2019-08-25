@@ -1,0 +1,117 @@
+ .flex-box{ 
+  display: flex; 
+  background-color:#FFFFF;  
+   justify-content: space-between; 
+   margin:auto;
+   width: 94%;
+  box-shadow: 1px 1px 3px #8888;
+}
+
+body{
+  background-color: #F6F8F9
+}
+
+.flex-box1{
+  display: flex;
+  background-color:#FFFFFF;
+  /* justify-content: flex-start; */
+  /* align-items: flex-start; */
+  padding:5px;
+
+}
+.flex-box2{
+  display: flex;
+  height: 25px; 
+  background-color:#FFFFFF;
+   flex-wrap: wrap;
+   justify-content: center; 
+   align-items: center; 
+   border-radius: 8px;
+   width: 40%;
+}
+.flex-box2{
+  border-style: ridge;
+  border-radius: 50px;
+  background-color: #FFFFFF;
+  display: block;
+  width:450px;
+  height: 20px; 
+}
+.flex-box3{
+  display: flex;
+  background-color: blue(235, 224, 224);
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-radius: 30px;
+  background-color:#32BDD2; 
+  padding:6px;
+
+  
+}
+ .filter-box{ 
+  display: flex;
+  background-color:#FFFFFF(238, 232, 232);
+  justify-content: flex-start;
+  align-items: center;
+  width: 550px; 
+  margin:auto;
+  width: 94%;
+  box-shadow: 1px 1px 1px #FFFFFF;
+  /* padding:1.5px; */
+} 
+.content-box1{
+  display: flex;
+  background-color:#FFFFFF(236, 229, 229);
+  justify-content: space-between;
+  align-items: center;
+  width: 94%; 
+  margin:auto;
+  box-shadow: 1px 1px 1px #FFFFFF;
+  padding:1.5px;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color:green;
+  border-radius: 60%;
+  display: inline-block;
+}
+.content-box2{
+  display: flex;
+  background-color:#FFFFFF(235, 224, 224);
+  justify-content: space-between;
+  align-items: center;
+  width: 94%; 
+  margin:auto;
+  box-shadow: 1px 1px 1px #FFFFFF;
+  padding:1.5px;
+  /* box-shadow: 1px 1px 3px #8888; */
+}
+.dot1 {
+  height: 15px;
+  width: 15px;
+  background-color:green;
+  border-radius: 60%;
+  display: inline-block;
+}
+.content-box3{
+  display: flex;
+  background-color:#FFFFFF(236, 223, 223);
+  justify-content: space-between;
+  align-items: center;
+   width: 94%; 
+  margin:auto;
+  box-shadow: 1px 1px 1px #FFFFFF;
+  padding:1.5px;
+  /* box-shadow: 1px 1px 3px #8888; */
+}
+.dot2 {
+  
+  height: 15px;
+  width: 15px;
+  background-color:green;
+  border-radius: 60%;
+  display: inline-block;
+  justify-content: space-between; 
+  align-items:flex-end;
+}

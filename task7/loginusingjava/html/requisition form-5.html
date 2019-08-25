@@ -32,7 +32,7 @@
                 </div>
                 <div class="zzz" style="margin-bottom: 25px">
                     <span style="font-family: 'roboto'; font-width 400: "><b>ADD APPROVER</b></span>
-                <img src="../image/request-icons-10.png" width="30" height="30">
+                <img src="../image/request-icons-10.png" width="30" height="30"  onclick="init4()">
                 </div>
             </div>
             <div class="boxa">
@@ -72,16 +72,33 @@
                   
                     <div class="bottoma">
                         <div class="save">
-                            <span><u>SAVE DRAFT</u></span>
+                            <span  onclick="init()"><u>SAVE DRAFT</u></span>
                         </div>
                         <div class="back">
-                            <span><u>BACK</u></span>
-                            <button class="button1" type="submit">NEXT -></button>
+                            <span onclick="init3()"><u>BACK</u></span>
+                            <button class="button1" type="submit"  onclick="init2()">NEXT -></button>
                         </div>
                     </div>
 
                     
 </body>
+<script>
+    function init() {
+        location.replace("requisition form-1 acknowlegment.html");
+    }
+    function init3() {
+        location.replace("requisition form-4.html");
+    }
+    function init2() {
+        location.replace("requisition form-5.html");
+    }
+    function init4() {
+        location.replace("addpeople.html");
+    }
+    
+    
+    console.log("move to login1 page");
+</script>
 
 
 </html>

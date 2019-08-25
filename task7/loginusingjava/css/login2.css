@@ -1,0 +1,55 @@
+*{
+    margin: 5px;
+    padding: 5px;
+    align-self: center;
+}
+.box{
+    border-radius: 5%;
+    background-color: white ;
+    width: 50%;
+    height: 60%;
+    top: 20%;
+    position: relative;
+    margin: 0 auto;
+    align-self: center;
+}
+
+.login-head{
+    text-decoration-line: underline;
+}
+.remember-me{
+    float: left;
+}
+/*.forgot-pass{
+    float: middle;
+}*/
+/*.All{   
+    border-radius: 0%;
+    background-color:greenyellow;
+    width: 80%;
+    height: 85%;
+    align-self: center;
+    padding: 7%;
+}*/
+#tb{
+    width: 60%;
+    /*height: 10px;
+    border-radius: 10%;*/
+}
+#tbp{
+    width: 60%;
+    /*height: 10px;
+    border-radius: 10%;*/
+}
+.button{
+    background-color: #32BDD2;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.bdy{
+    background-color: gray;
+}

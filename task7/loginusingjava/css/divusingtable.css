@@ -1,0 +1,111 @@
+body{
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    background: #f6f8f9;
+}
+.flex-head{
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding: 0px 0px 0px 10px;
+
+}
+.flex-profile{
+    background: #fff;
+    height: 50px;
+    padding: 0px 10px 0px 0px;
+    float: right;
+}
+.flex-profile image{
+    border-radius: 50%;
+}
+.flex-box{ 
+    background-color:#FFFFF;  
+     margin:auto;
+     width: 94%;
+    box-shadow: 1px 1px 3px #8888;
+}
+.flex-box{ 
+    /* display: flex;  */
+    background-color:#FFFFF;  
+     /* justify-content: space-between;  */
+     margin:auto;
+     width: 94%;
+    box-shadow: 1px 1px 3px #8888;
+    /* float:left; */
+}
+  
+.flex-box1{
+    /* display: flex; */
+    background-color:#FFFFFF;
+    /* justify-content: flex-start; */
+    /* align-items: flex-start; */
+    /* padding:5px; */
+    margin:  9px 0px 0px 20px;
+   float: left;
+    border: 2px black;
+}
+.flex-box2{
+    /* display: flex; */
+    height: 25px; 
+    /* background-color:#FFFFFF; */
+     /* flex-wrap: wrap; */
+     /* justify-content: center;  */
+     /* align-items: center;  */
+     border-radius: 10px;
+     width: 60%;
+     border: 2px solid greenyellow;
+     margin: 70px 0px 0px 200px;
+     float:center;
+}
+.flex-box3{
+    /* display: flex; */
+    /* background-color: blue(235, 224, 224); */
+    /* justify-content: flex-end; */
+    /* align-items: flex-end; */
+    border-radius: 30px;
+    background-color:#32BDD2; 
+    padding:3px;
+    border: 2px solid greenyellow;
+    margin: -25px 0px 0px 1125px;
+}
+.image1{
+    float: left;
+}
+.filter{
+    background-color: white;
+    align-items: center;
+    margin: auto;
+    width: 89%;
+    font-family: 'roboto';
+    font-weight: 500;
+}
+
+table {
+    border-collapse: collapse;
+    width: 89%;
+    margin: auto;
+    font-family: 'roboto';
+    font-weight: 500;
+}
+  
+td, th {
+    border: .5px solid #dddddd;
+    padding: 8px;
+}
+  
+tr:nth-child {
+    background-color: #dddddd;
+} 
+
+.content5{
+    
+    background-color: #f1f1f1;
+    width: 89%;
+    text-align: center;
+    margin: auto;
+    font-family: 'roboto';
+    font-weight: 500;
+    height: 10%;
+}
