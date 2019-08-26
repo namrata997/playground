@@ -13,9 +13,7 @@ body{
     justify-content: space-between;
     float: left;
     padding: 0px 0px 0px 10px;
-
 }
-
 .flex-profile{
     display: flex;
     flex-direction: row;
@@ -133,5 +131,7 @@ body{
     padding:3px;
     margin: none;
 }
+
+
 
 

@@ -50,19 +50,17 @@ body{
         justify-content: space-evenly;
         height: 622px;
         padding: 0px 10px 0px 0px;
-        width: auto;
+        /* width: auto; */
+        width: 89%;
 }
+
 .button{
-    margin: auto;
-    float: right;
-    /* display: flex; */
-    /* background-color: blue(235, 224, 224); */
-    /* justify-content: flex-end; */
-    /* align-items: flex-end; */
-    border-radius: 60px;
-    background-color:#32BDD2; 
-    padding:3px;
-   
+    background-color: #32BDD2;
+    color: white;
+    padding: 10px 20px ;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
 }
 .box{
     width: 300px;
