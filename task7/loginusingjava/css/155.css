@@ -295,9 +295,9 @@ header{
     padding: 2%;
     align-items: center;
     justify-items: start; 
-    width: 1000px;
+    width: 1100px;
     margin: 0px 0px 0px 30px;
-    /* margin-top: 50%; */
+    margin-top: 50%;
 }
 .button1{
     /* width: 120%; */
