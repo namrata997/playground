@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ListAdapter;
 import android.widget.TextView;
 
 public class MyListAdapter extends BaseAdapter {
@@ -36,7 +35,7 @@ public class MyListAdapter extends BaseAdapter {
         TextView title,date,verification;
         title=view.findViewById(R.id.title);
         date=view.findViewById(R.id.date);
-        verification=view.findViewById(R.id.textView20);
+        verification=view.findViewById(R.id.verification);
 
         title.setText(String.valueOf(titles[position]));
         date.setText(String.valueOf(dates[position]));

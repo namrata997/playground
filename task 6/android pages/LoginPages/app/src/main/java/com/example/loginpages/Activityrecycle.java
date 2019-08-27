@@ -3,7 +3,9 @@ package com.example.loginpages;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.widget.ListPopupWindow;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,24 +16,15 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
 
-public class Navigationactivity extends AppCompatActivity
+public class Activityrecycle extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    ListPopupWindow listPopupWindow;
-    ImageView filter;
-    ListView listView;
-//    TextView popUp;
-
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigationactivity);
+        setContentView(R.layout.activity_activityrecycle);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -50,34 +43,18 @@ public class Navigationactivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
+        recyclerView=findViewById(R.id.box1);
+        String title[]={"PUR-056-2019","PUR-057-2019","PUR-058-2019","PUR-059-2019","PUR-056-2019","PUR-057-2019","PUR-058-2019","PUR-059-2019"};
+        String date[]={"22-Aug","24-Aug","28-Aug","30-Aug","22-Aug","24-Aug","28-Aug","30-Aug"};
+        String verification[]={"APPROVED","REJECTED","DRAFT","AWAITING","APPROVED","REJECTED","DRAFT","AWAITING"};
+
+        RecyclerView.Adapter recycleViewadapter=new MyListActvityrecycleAdapter(getApplicationContext(),title,date,verification);
+        recyclerView.setAdapter(recycleViewadapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
 
 
 
-        filter = findViewById(R.id.imageView9);
-        String[] conent_list = {"Clear","Approval","Draft","Reject","Awaiting"};
-//      TextView popUp=findViewById(R.id.imageView9);
-
-        listPopupWindow = new ListPopupWindow(getApplicationContext());
-        listPopupWindow.setAdapter(new ArrayAdapter<>(getApplicationContext(),R.layout.dropdown,conent_list));
-        listPopupWindow.setAnchorView(filter);
-        listPopupWindow.setModal(true);
-
-
-
-
-        filter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                listPopupWindow.show();
-            }
-        });
-        listView=findViewById(R.id.box);
-        String title[]={"PUR-056-2019","PUR-057-2019","PUR-058-2019","PUR-059-2019"};
-        String date[]={"22-Aug","24-Aug","28-Aug","30-Aug"};
-        String verification[]={"APPROVED","REJECTED","DRAFT","AWAITING"};
-
-        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),title,date,verification);
-        listView.setAdapter(listAdapter);
 
     }
 
@@ -91,10 +68,11 @@ public class Navigationactivity extends AppCompatActivity
         }
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigationactivity, menu);
+        getMenuInflater().inflate(R.menu.activityrecycle, menu);
         return true;
     }
 

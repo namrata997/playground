@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     i4.setVisibility(View.VISIBLE);
                 }
                 else {
-                    Intent intent=new Intent(getApplicationContext(),Navigationactivity.class);
+                    Intent intent=new Intent(getApplicationContext(),Activityrecycle.class);
                     startActivity(intent);
                 }
                 }
