@@ -1,5 +1,6 @@
 package com.example.loginpages;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -78,7 +80,14 @@ public class Navigationactivity extends AppCompatActivity
 
         ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),title,date,verification);
         listView.setAdapter(listAdapter);
-
+        Button loadbtn = new Button(this);
+        loadbtn = findViewById(R.id.button2);
+        loadbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Jsonclass.class);
+            }
+        });
     }
 
     @Override
