@@ -9,17 +9,30 @@
 <body class="bdy">
     <form>
         <div class="All">
-            <div class="pack"onclick="init()" style="margin-top:12%">
-                <div class="login"><p>FORGOT PASSWORD</p></div>
+            <div class="pack">
+                <div class="login"><span>FORGOT PASSWORD</span></div>
                 <div class="user">
-                    <p>The link has been sent to your email. </p>
-                    <p> The generated link will be active for 24 hours.</p>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit,</p>
+                    <p> Mauris mattis,tortor sit amet tempor vehicular.</p>
                 </div>
-               
+                <div class="password">
+                    <p>Email</p>
+                    <input type="password" id="tbp" required>
+                    <p><img src="../image/request-icons-07.png" width="18px" height="12px" class="image"><span style="color: red">This Field Requried</span></p>
+                    <p><img src="../image/request-icons-07.png" width="18px" height="12px" class="image"><span style="color: red">This Email is not register with us</span></p>
+                </div>
+                <div class="login1">
+                    &nbsp;&nbsp;
+                    <button class="button" type="submit">CONTINUE</button>
                 </div>
             </div>
         </div>
     </form>
+    <div class="overlay"> 
+    <div class="square" onclick="init()">
+        <span>Forgot Password<br><br><br>
+        The link will be activated in 24hours</span>
+    </div>
 </body>
 <script>
     function init() {
@@ -27,4 +40,5 @@
     }
     console.log("move to login1 page");
 </script>
+
 </html>
