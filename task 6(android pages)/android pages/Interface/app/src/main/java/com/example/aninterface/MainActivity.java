@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity implements Interconnected,In
         add();
         sub();
         ball();
+        Example c=new Example();
+        c.Example();
 
     }
 
