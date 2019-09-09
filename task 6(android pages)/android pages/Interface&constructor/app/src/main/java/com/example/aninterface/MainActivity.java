@@ -1,14 +1,15 @@
 package com.example.aninterface;
 
-import android.content.Context;
-import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements Interconnected,Interconnected2 {
 
+
+    Button Login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,8 +17,19 @@ public class MainActivity extends AppCompatActivity implements Interconnected,In
         add();
         sub();
         ball();
-        Example c=new Example();
-        System.out.println("Area of Example="+c.area());
+
+
+        Login = findViewById(R.id.Button);
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Example c=new Example();
+                System.out.println("Area of Example="+c.area(getApplicationContext()));
+                c.area(getApplicationContext());
+            }
+        });
+
+
 
     }
 
@@ -38,4 +50,5 @@ public class MainActivity extends AppCompatActivity implements Interconnected,In
     public void ball() {
         Toast.makeText(this, "we will do it", Toast.LENGTH_SHORT).show();
     }
+
 }
