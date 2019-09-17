@@ -20,7 +20,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class Navigationactivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

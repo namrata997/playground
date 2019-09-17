@@ -30,9 +30,24 @@ public class MainActivity extends AppCompatActivity {
         ArrayA.add("Approval");
         ArrayB.add("26jul2019");
 
-        ListAdapter listAdapter= new listadapter(getApplicationContext(),Array,ArrayA,ArrayB);
 
-        listView.setAdapter(listAdapter);
+        Array.add("pur-056-2019");
+        ArrayA.add("Approval");
+        ArrayB.add("26jul2019");
+
+
+        Array.add("pur-056-2019");
+        ArrayA.add("Approval");
+        ArrayB.add("26jul2019");
+
+
+        Array.add("pur-056-2019");
+        ArrayA.add("Approval");
+        ArrayB.add("26jul2019");
+
+        listadapter LA= new listadapter(getApplicationContext(),Array,ArrayA,ArrayB);
+
+        listView.setAdapter(LA);
 
     }
 }

@@ -11,10 +11,16 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout8"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView12"
@@ -22,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="117dp"
             android:layout_marginRight="117dp"
             android:text="My request"
@@ -35,10 +41,10 @@
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="117dp"
-            android:layout_marginLeft="117dp"
-            android:layout_marginTop="30dp"
-            android:background="@android:color/holo_blue_dark"
+            android:layout_marginStart="156dp"
+            android:layout_marginLeft="156dp"
+            android:layout_marginTop="8dp"
+            android:background="#32bbd2"
             android:text="New request"
             android:textColor="#F5F2F2"
             app:layout_constraintStart_toEndOf="@+id/textView12"
@@ -47,7 +53,7 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout9"
-        android:layout_width="405dp"
+        android:layout_width="0dp"
         android:layout_height="123dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -61,8 +67,8 @@
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="277dp"
-            android:layout_height="46dp"
+            android:layout_width="322dp"
+            android:layout_height="50dp"
             android:layout_marginStart="56dp"
             android:layout_marginLeft="56dp"
             android:layout_marginTop="12dp"
@@ -143,17 +149,18 @@
 
     </android.support.constraint.ConstraintLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/box1"
-        android:layout_width="match_parent"
+    <ListView
+        android:id="@+id/list1"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
 

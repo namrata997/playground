@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.text.BreakIterator;
-
 class MyListActvityrecycleAdapter extends RecyclerView.Adapter {
     String titles[], dates[], verifications[];
     private Context context;
@@ -48,10 +46,10 @@ class MyListActvityrecycleAdapter extends RecyclerView.Adapter {
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.title);
-            date = itemView.findViewById(R.id.date);
-            verification = itemView.findViewById(R.id.verification);
-            imageView = itemView.findViewById(R.id.viewkb);
+            title = itemView.findViewById(R.id.textView);
+            date = itemView.findViewById(R.id.textView4);
+            verification = itemView.findViewById(R.id.textView2);
+            imageView = itemView.findViewById(R.id.imageView);
         }
 
         public void setUpData(String titles, String dates, String verifications) {

@@ -12,8 +12,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static android.support.v7.widget.RecyclerView.*;
-
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder> {
     String titles[],dates[],verifications[];
     private Context context;
@@ -69,9 +67,9 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            title = itemView.findViewById(R.id.title);
-            date = itemView.findViewById(R.id.date);
-            verification = itemView.findViewById(R.id.verification);
+            title = itemView.findViewById(R.id.textView);
+            date = itemView.findViewById(R.id.textView4);
+            verification = itemView.findViewById(R.id.textView2);
             }
 
             public void setUpData(JSONObject jsonObject) {

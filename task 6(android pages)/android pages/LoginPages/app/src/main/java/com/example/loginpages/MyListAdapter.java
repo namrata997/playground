@@ -33,9 +33,9 @@ public class MyListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view=LayoutInflater.from(context).inflate(R.layout.items,parent,false);
         TextView title,date,verification;
-        title=view.findViewById(R.id.title);
-        date=view.findViewById(R.id.date);
-        verification=view.findViewById(R.id.verification);
+        title=view.findViewById(R.id.textView);
+        date=view.findViewById(R.id.textView4);
+        verification=view.findViewById(R.id.textView2);
 
         title.setText(String.valueOf(titles[position]));
         date.setText(String.valueOf(dates[position]));

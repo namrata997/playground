@@ -13,10 +13,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     Button login;
-    ImageView i1;
-    ImageView i2;
-    TextView i3;
-    TextView i4;
+    ImageView imageView;
+    ImageView imageView1;
+    TextView textView;
+    TextView textView1;
     TextView forgot;
     EditText email;
     @Override
@@ -25,29 +25,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
         login = findViewById(R.id.button1);
-        i1=findViewById(R.id.imageView);
-        i2=findViewById(R.id.imageView2);
-        i3=findViewById(R.id.textView2);
-        i4=findViewById(R.id.textView3);
-        forgot=findViewById(R.id.textView6);
-        email=findViewById(R.id.editText);
+        imageView = findViewById(R.id.imageView);
+        imageView1= findViewById(R.id.imageView2);
+        textView = findViewById(R.id.textView2);
+        textView1 = findViewById(R.id.textView3);
+        forgot = findViewById(R.id.textView6);
+        email = findViewById(R.id.editText);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(email.getText().toString().equals("")){
-                    i1.setVisibility(View.VISIBLE);
-                    i2.setVisibility(View.VISIBLE);
-                    i3.setVisibility(View.VISIBLE);
-                    i4.setVisibility(View.VISIBLE);
-                }
-                else {
-                    Intent intent=new Intent(getApplicationContext(),Activityrecycle.class);
+                if (email.getText().toString().equals("")) {
+                    imageView.setVisibility(View.VISIBLE);
+                    imageView1.setVisibility(View.VISIBLE);
+                    textView.setVisibility(View.VISIBLE);
+                    textView1.setVisibility(View.VISIBLE);
+                } else {
+                    Intent intent = new Intent(getApplicationContext(), Activityrecycle.class);
                     startActivity(intent);
                 }
-                }
-            });
+            }
+        });
 
         forgot.setOnClickListener(new View.OnClickListener() {
             @Override

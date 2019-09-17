@@ -1,6 +1,5 @@
 package com.example.loginpages;
 
-import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,10 +11,10 @@ import android.widget.TextView;
 
 public class ForgotPassword extends AppCompatActivity {
     Button contiue;
-    ImageView a1;
-    ImageView a2;
-    TextView a3;
-    TextView a4;
+    ImageView imageView1;
+    ImageView imageView2;
+    TextView textView1;
+    TextView textView2;
     EditText email;
     AlertDialog.Builder alertBuilding;
 
@@ -33,10 +32,10 @@ public class ForgotPassword extends AppCompatActivity {
         final AlertDialog alertDialog=alertBuilding.create();
 
 
-        a1=findViewById(R.id.imageView4);
-        a2=findViewById(R.id.imageView5);
-        a3=findViewById(R.id.textView8);
-        a4=findViewById(R.id.textView9);
+        imageView1=findViewById(R.id.imageView4);
+        imageView2=findViewById(R.id.imageView5);
+        textView1=findViewById(R.id.textView8);
+        textView2=findViewById(R.id.textView9);
         email=findViewById(R.id.editText3);
 
 
@@ -44,10 +43,10 @@ public class ForgotPassword extends AppCompatActivity {
             @Override
             public void onClick(View view) {
             if(email.getText().toString().equals("")) {
-                a1.setVisibility(View.VISIBLE);
-                a2.setVisibility(View.VISIBLE);
-                a3.setVisibility(View.VISIBLE);
-                a4.setVisibility(View.VISIBLE);
+                imageView1.setVisibility(View.VISIBLE);
+                imageView2.setVisibility(View.VISIBLE);
+                textView1.setVisibility(View.VISIBLE);
+                textView2.setVisibility(View.VISIBLE);
             }
             else{
                 alertBuilding.show();

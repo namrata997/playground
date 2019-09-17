@@ -1,4 +1,4 @@
-package com.example.itemsinlist;
+package com.example.loginpages;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,21 +16,17 @@ class listadapter extends BaseAdapter {
     ArrayList<String> Arraya;
     ArrayList<String> Arrayb;
     ArrayList<String> Arrayc;
-
     public listadapter(Context context, ArrayList<String> textView, ArrayList<String> textView2, ArrayList<String> textView4) {
+
         this.context=context;
         this.Arraya=textView;
         this.Arrayb=textView2;
         this.Arrayc=textView4;
-//        Inflater=(LayoutInflater.from(context));
-
     }
-
 
     @Override
     public int getCount() {
         return Arraya.size();
-
     }
 
     @Override
@@ -45,7 +41,7 @@ class listadapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        View im=LayoutInflater.from(context).inflate(R.layout.containers,viewGroup,false);
+        View im=LayoutInflater.from(context).inflate(R.layout.items,viewGroup,false);
 
 
 //        View view=LayoutInflater.from(context).inflate(R.layout.,null);
@@ -53,8 +49,8 @@ class listadapter extends BaseAdapter {
         in.setText(Arraya.get(i));
         TextView bb = (TextView) im.findViewById(R.id.textView2);
         bb.setText(Arrayb.get(i));
-       TextView cc = (TextView) im.findViewById(R.id.textView4);
-       cc.setText(Arrayc.get(i));
+        TextView cc = (TextView) im.findViewById(R.id.textView4);
+        cc.setText(Arrayc.get(i));
         ImageView ac=(ImageView) im.findViewById(R.id.imageView);
         ac.setImageResource(R.drawable.notification);
         return im;
