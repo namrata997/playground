@@ -49,7 +49,7 @@ class MyListActvityrecycleAdapter extends RecyclerView.Adapter {
             title = itemView.findViewById(R.id.textView);
             date = itemView.findViewById(R.id.textView4);
             verification = itemView.findViewById(R.id.textView2);
-            imageView = itemView.findViewById(R.id.imageView);
+            imageView = itemView.findViewById(R.id.bellicon);
         }
 
         public void setUpData(String titles, String dates, String verifications) {

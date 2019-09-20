@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         login = findViewById(R.id.button1);
-        imageView = findViewById(R.id.imageView);
+        imageView = findViewById(R.id.bellicon);
         imageView1= findViewById(R.id.imageView2);
         textView = findViewById(R.id.textView2);
         textView1 = findViewById(R.id.textView3);

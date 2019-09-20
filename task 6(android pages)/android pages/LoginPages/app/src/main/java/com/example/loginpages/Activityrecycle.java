@@ -1,12 +1,11 @@
 package com.example.loginpages;
 
+import android.app.Activity;
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -17,15 +16,23 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+
+import Requestmodel.request;
+import global.listitem;
+
+import static android.provider.Contacts.SettingsColumns.KEY;
 
 public class Activityrecycle extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     ListView listView;
     Button button;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,17 +54,10 @@ public class Activityrecycle extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
-        listView=findViewById(R.id.list1);
+        imageView=findViewById(R.id.bellicon);
+        listView=findViewById(R.id.listview);
         button=findViewById(R.id.button5);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent;
-                intent = new Intent(getApplicationContext(),Formone.class);
-                startActivity(intent);
-            }
-        });
+
 //        String title[]={"PUR-056-2019","PUR-057-2019","PUR-058-2019","PUR-059-2019","PUR-056-2019","PUR-057-2019","PUR-058-2019","PUR-059-2019"};
 //        String date[]={"22-Aug","24-Aug","28-Aug","30-Aug","22-Aug","24-Aug","28-Aug","30-Aug"};
 //        String verification[]={"APPROVED","REJECTED","DRAFT","AWAITING","APPROVED","REJECTED","DRAFT","AWAITING"};
@@ -65,48 +65,105 @@ public class Activityrecycle extends AppCompatActivity
 
 //        RecyclerView.Adapter recycleViewadapter=new MyListActvityrecycleAdapter(getApplicationContext(),title,date,verification);
 //        recyclerView.setAdapter(recycleViewadapter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+//           recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 //        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        final ArrayList<String> Array = new ArrayList<String>(6);
+//        final ArrayList<String> Array = new ArrayList<String>(6);
 
-        final ArrayList<String> ArrayA= new ArrayList<String>(6);
+//        final ArrayList<String> ArrayA= new ArrayList<String>(6);
 
-        final ArrayList<String> ArrayB = new ArrayList<String>(6);
-        Array.add("pur-056-2019");
-        ArrayA.add("Approval");
-        ArrayB.add("26jul2019");
+//        final ArrayList<String> ArrayB = new ArrayList<String>(6);
 
 
-        Array.add("pur-056-2019");
-        ArrayA.add("Approval");
-        ArrayB.add("26jul2019");
+
+        final ArrayList<request> mode=new ArrayList<>();
 
 
-        Array.add("pur-056-2019");
-        ArrayA.add("Approval");
-        ArrayB.add("26jul2019");
+        request Request=new request();
+        Request.setRequestno("pur-056-2019");
+        Request.setDate("26jul2019");
+        Request.setStatus(listitem.approval);
+        mode.add(Request);
+
+        Request=new request();
+        Request.setRequestno("PUR-057-2019");
+        Request.setStatus(listitem.draft);
+        Request.setDate("27jul2019");
+        mode.add(Request);
+
+        Request=new request();
+        Request.setRequestno("PUR-058-2019");
+        Request.setStatus(listitem.reject);
+        Request.setDate("28jul2019");
+        mode.add(Request);
+
+        Request=new request();
+        Request.setRequestno("PUR-059-2019");
+        Request.setStatus(listitem.awaiting);
+        Request.setDate("29jul2019");
+        mode.add(Request);
 
 
-        Array.add("pur-056-2019");
-        ArrayA.add("Approval");
-        ArrayB.add("26jul2019");
 
 
-        Array.add("pur-056-2019");
-        ArrayA.add("Approval");
-        ArrayB.add("26jul2019");
+//        listView.setAdapter(LA);
+//        listView=findViewById(R.id.list);
 
 
-        Array.add("pur-056-2019");
-        ArrayA.add("Approval");
-        ArrayB.add("26jul2019");
+//        Array.add("pur-056-2019");
+//        ArrayA.add("Approval");
+//        ArrayB.add("26jul2019");
+//
+//
+//        Array.add("pur-056-2019");
+//        ArrayA.add("Approval");
+//        ArrayB.add("26jul2019");
+//
+//
+//        Array.add("pur-056-2019");
+//        ArrayA.add("Approval");
+//        ArrayB.add("26jul2019");
+//
+//
+//        Array.add("pur-056-2019");
+//        ArrayA.add("Approval");
+//        ArrayB.add("26jul2019");
+//
+//
+//        Array.add("pur-056-2019");
+//        ArrayA.add("Approval");
+//        ArrayB.add("26jul2019");
+//
+//
+//        Array.add("pur-056-2019");
+//        ArrayA.add("Approval");
+//        ArrayB.add("26jul2019");
 
-        listadapter LA= new listadapter(getApplicationContext(),Array,ArrayA,ArrayB);
-
+        listadapter LA= new listadapter(getApplicationContext(),mode);
         listView.setAdapter(LA);
+
+        button.setOnClickListener(new View.OnClickListener() {
+           @Override
+            public void onClick(View view) {
+                Intent intent;
+                intent = new Intent(getApplicationContext(),Formone.class);
+               startActivity(intent);
+            }
+       });
+
+    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            Intent intent=new Intent( Activityrecycle.this ,RequestReview.class);
+            startActivity(intent);
+        }
+    });
+
+
+
     }
 
-    @Override
+
+
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -159,8 +216,8 @@ public class Activityrecycle extends AppCompatActivity
 
         }
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+       DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
+   }
 }

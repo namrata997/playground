@@ -3,9 +3,9 @@
     android:shape="line" >
 
     <stroke
-        android:width="5dp"
+        android:width="2dp"
         android:color="#a4a2a2"
-        android:dashWidth="10dp"
-        android:dashGap="5dp">
+        android:dashWidth="2dp"
+        android:dashGap="4dp">
     </stroke>
 </shape>

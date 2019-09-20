@@ -1,10 +1,8 @@
 package com.example.loginpages;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.widget.ListPopupWindow;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,30 +13,21 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import Requestmodel.request;
-import global.listitem;
-
-public class Navigationactivity extends AppCompatActivity
+public class Formtwo extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    ListPopupWindow listPopupWindow;
-    ImageView filter;
     ListView listView;
-//    TextView popUp;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigationactivity);
+        setContentView(R.layout.activity_formtwo);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -57,84 +46,41 @@ public class Navigationactivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
+        listView=findViewById(R.id.listview);
+
+        final ArrayList<String> content= new ArrayList<String>(4);
 
 
+        content.add("IBM ThinkServer TS150 Tower Server With Max. " +
+                "Processor 1 x Intel Xeon E3 (Quad Core) E3-1225 v5\"" +
+                "(3.3 GHz /Cache 8 MB)... / STD MEMORY 8GB X 1/ MAX. " +
+                "MEMORY 64GB 4 Slots/HARD DRIVE 1 X 1TB SATA 3.5\" 7.2k" +
+                " SATA / STD. HDD BAY/ 3 bay MAX. HDD BAY upto 4 x 3.5\" " +
+                "+1 x 2.5\" bay/ OPTICAL Multi Burner/Integrated RAID 0,1,5," +
+                "10 (RAID 121i).");
+        content.add("Lenovo ThinkServer TS450 (PN:70M2001VIH) With Max. Processor" +
+                " 1 x Intel Xeon E3 (Quad Core) E3-1225 v5”(3.3 GHz /Cache 8 MB)/ " +
+                "STD MEMORY 8GB X 1 MAX. MEMORY 64GB; 4 DIMM Memory Slots/ HARD" +
+                " DRIVE Open Bay/ 2.5” SAS/SATA HS Bays (8 bay MAX. HDD BAY upto" +
+                " 8 x 2.5” bay MAX. HDD BAY upto 16x2.5”)/OPTICAL Multi Burner/ PCIe RAID " +
+                "0,1,10 (RAID 520i). Supports SAS & SATA drives/Power Supply Standard (Inbuilt)" +
+                " 1 x 450W Power Supply /Max: 2");
+        content.add("IBM X3300M4 Server With x3300M4/ Part NO:7382IA4/ Intel Xeon E5 1230v2 1.8 " +
+                "GHz,10 MB,1066MHz/ 1x 8GB RAM/ 1x500GB SATA HDD/ 3.5Simple-Swap/ MULTI BUTRNER");
 
-        filter = findViewById(R.id.imageView9);
-        String[] conent_list = {"Clear","Approval","Draft","Reject","Awaiting"};
-//      TextView popUp=findViewById(R.id.imageView9);
-        listPopupWindow = new ListPopupWindow(getApplicationContext());
-        listPopupWindow.setAdapter(new ArrayAdapter<>(getApplicationContext(),R.layout.dropdown,conent_list));
-        listPopupWindow.setAnchorView(filter);
-        listPopupWindow.setModal(true);
-        filter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                listPopupWindow.show();
-            }
-        });
-        listView=findViewById(R.id.box);
-        String title[]={"PUR-056-2019","PUR-057-2019","PUR-058-2019","PUR-059-2019"};
-        String date[]={"22-Aug","24-Aug","28-Aug","30-Aug"};
-        String verification[]={"APPROVED","REJECTED","DRAFT","AWAITING"};
+        content.add("IBM Lenovo ThinkServer RD450 Rack Server (PN:70Q90059IH) with 1 x Intel® Xeon®" +
+                " E5-2620v4 (2.1GHz/8C/20MB/85W/2133Mhz)/Max: 2 Processors/ STD MEMORY 16GB X 1 MAX. " +
+                "MEMORY 1 TB ;16 Slots/ HARD DRIVE : Open Bay (2.5” HOT Swap SAS/SATA STD. HDD BAY 8 bay /" +
+                " MAX. HDD BAY 16 bay with optical bay/24 bay without optical bay) / OPTICAL Multi Burner/" +
+                " Integrated RAID 0,1,10 (RAID 110i). Supports only SATA drive/ Power Supply Standard (Inbuilt)" +
+                " 1 x 750W Power Supply Max: 2");
 
-        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),title,date,verification);
-        listView.setAdapter(listAdapter);
-
-//        ArrayList<request> mode=new ArrayList<>();
-//
-//
-//        request Request=new request();
-//        Request.setRequestno("pur");
-//        Request.setDate("26jul2019");
-//        Request.setStatus(listitem.approval);
-//        mode.add(Request);
-//
-//        Request=new request();
-//        Request.setRequestno("PUR-057-2019");
-//        Request.setStatus(listitem.draft);
-//        Request.setDate("27jul2019");
-//        mode.add(Request);
-//
-//        Request=new request();
-//        Request.setRequestno("PUR-058-2019");
-//        Request.setStatus(listitem.reject);
-//        Request.setDate("28jul2019");
-//        mode.add(Request);
-//
-//        Request=new request();
-//        Request.setRequestno("PUR-059-2019");
-//        Request.setStatus(listitem.awaiting);
-//        Request.setDate("29jul2019");
-//        mode.add(Request);
-//
-//        listadapter LA= new listadapter(getApplicationContext(),mode);
-//
-//
-////
-//        listView.setAdapter(LA);
-//
-//
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Intent ia=new Intent(getApplicationContext(),ForgotPassword.class);
-//                startActivity(ia);
-//            }
-//        });
+        content.add("daptec 128 MB Raid Controller Pair. Pci-e SAS/SATA");
 
 
+        adapterforlist Lc= new adapterforlist( getApplicationContext(),content);
 
-
-
-        Button loadbtn = new Button(this);
-        loadbtn = findViewById(R.id.button2);
-        loadbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Jsonclass.class);
-            }
-        });
+        listView.setAdapter(Lc);
     }
 
     @Override
@@ -150,7 +96,7 @@ public class Navigationactivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigationactivity, menu);
+        getMenuInflater().inflate(R.menu.formtwo, menu);
         return true;
     }
 
