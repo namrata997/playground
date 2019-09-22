@@ -69,7 +69,7 @@ class listadapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 request request=arrayList.get(i);
-                Intent intent=new Intent(context,RequestReview.class);
+                Intent intent=new Intent(context,Review.class);
                 intent.putExtra(KEY,request);
 
 

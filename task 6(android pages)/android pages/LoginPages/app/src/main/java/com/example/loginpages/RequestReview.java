@@ -10,7 +10,7 @@ TextView textView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_review);
-        textView=findViewById(R.id.textView13);
+//        textView=findViewById(R.id.textView13);
         Bundle Requesta=getIntent().getBundleExtra("Request");
 //        String Requestnbo=Requesta.getString("requestno");
 //        textView.setText(Requestnbo);

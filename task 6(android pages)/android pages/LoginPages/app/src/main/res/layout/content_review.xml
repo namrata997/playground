@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Review"
+    tools:showIn="@layout/app_bar_review">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/msg" />
+
+        <ImageView
+            android:id="@+id/calander"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/message"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ca" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/calander"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pe" />
+
+        <ImageView
+            android:id="@+id/increase"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/edit"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ge" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout16"
+                android:layout_width="395dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:background="#245070"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout14">
+
+                <TextView
+                    android:id="@+id/wish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="16dp"
+                    android:text="REQUEST VIEW"
+                    android:textColor="#fff"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="360dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor vehicula."
+                    android:textColor="#fff"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wish" />
+            </android.support.constraint.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout16">
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="22dp"
+                    android:text="REQUEST#" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView41"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginBottom="-30dp"
+                    android:text="PUR - 2019 - 056" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="57dp"
+                    android:layout_marginLeft="57dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_toEndOf="@+id/textView41"
+                    android:layout_toRightOf="@+id/textView41"
+                    android:text="SUBMITTED" />
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView43"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_toEndOf="@+id/textView42"
+                    android:layout_toRightOf="@+id/textView42"
+                    android:text="06, July 2019" />
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="86dp"
+                    android:layout_marginRight="86dp"
+                    android:text="statues" />
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_below="@+id/textView45"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginRight="38dp"
+                    android:layout_toEndOf="@+id/textView44"
+                    android:layout_toRightOf="@+id/textView44"
+                    android:text="AWAITING " />
+
+
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView42"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="40dp"
+                    android:text="NOTE"
+                    android:textColor="@android:color/background_dark"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="204dp"
+                    android:layout_height="117dp"
+                    android:layout_below="@+id/textView48"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="13dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor vehicula, tortor ipsum faucibus nunc, id aliquam lacus odio nec magna. Cras a ipsum placerat, efficitur nibh sed, iaculis elit. Mauris semper tempor facilisis."
+                    android:textColor="@android:color/background_dark"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+
+                <TextView
+                    android:id="@+id/textView50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView49"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="9dp"
+                    android:text="REQUEST TYPE - SELF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView49" />
+
+                <TextView
+                    android:id="@+id/textView57"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView50"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="23dp"
+                    android:text="ITEMS" />
+
+                <TextView
+                    android:id="@+id/textView58"
+                    android:layout_width="192dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView57"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="13dp"
+                    android:text="'IBM ThinkServer TS150 Tower Server With Max. Processor 1 x Intel Xeon E3 (Quad Core) E3-1225 v5&quot;(3.3 GHz /Cache 8 MB)... / STD MEMORY 8GB X 1/ MAX. MEMORY 64GB 4 Slots/HARD DRIVE 1 X 1TB SATA 3.5&quot; 7.2k SATA / STD. HDD BAY/ 3 bay MAX. HDD BAY upto 4 x 3.5&quot; +1 x 2.5&quot; bay/ OPTICAL Multi Burner/Integrated RAID 0,1,5,10 (RAID 121i).'" />
+
+                <TextView
+                    android:id="@+id/textView59"
+                    android:layout_width="33dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/textView47"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginLeft="72dp"
+                    android:layout_marginTop="243dp"
+                    android:layout_marginEnd="94dp"
+                    android:layout_marginRight="94dp"
+                    android:layout_toEndOf="@+id/textView58"
+                    android:layout_toRightOf="@+id/textView58"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/textView60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView59"
+                    android:layout_marginStart="73dp"
+                    android:layout_marginLeft="73dp"
+                    android:layout_marginTop="268dp"
+                    android:layout_toEndOf="@+id/textView58"
+                    android:layout_toRightOf="@+id/textView58"
+                    android:text="10 Jul 2019" />
+
+                <TextView
+                    android:id="@+id/textView61"
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView60"
+                    android:layout_alignStart="@+id/textView64"
+                    android:layout_alignLeft="@+id/textView64"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="-24dp"
+                    android:layout_marginLeft="-24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="45dp"
+                    android:layout_marginRight="45dp"
+                    android:text="Rs. 45, 000" />
+
+                <TextView
+                    android:id="@+id/textView62"
+                    android:layout_width="192dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView57"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="243dp"
+                    android:text="'IBM ThinkServer TS150 Tower Server With Max. Processor 1 x Intel Xeon E3 (Quad Core) E3-1225 v5&quot;(3.3 GHz /Cache 8 MB)... / STD MEMORY 8GB X 1/ MAX. MEMORY 64GB 4 Slots/HARD DRIVE 1 X 1TB SATA 3.5&quot; 7.2k SATA / STD. HDD BAY/ 3 bay MAX. HDD BAY upto 4 x 3.5&quot; +1 x 2.5&quot; bay/ OPTICAL Multi Burner/Integrated RAID 0,1,5,10 (RAID 121i).'" />
+
+
+                <TextView
+                    android:id="@+id/textView64"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/textView47"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="506dp"
+                    android:layout_marginEnd="84dp"
+                    android:layout_marginRight="84dp"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/textView65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView59"
+                    android:layout_marginStart="68dp"
+                    android:layout_marginLeft="68dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toEndOf="@+id/textView58"
+                    android:layout_toRightOf="@+id/textView58"
+                    android:text="10 Jul 2019" />
+
+                <TextView
+                    android:id="@+id/textView66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView60"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="-283dp"
+                    android:layout_toEndOf="@+id/textView58"
+                    android:layout_toRightOf="@+id/textView58"
+                    android:text="Rs. 45, 000" />
+
+
+                <TextView
+                    android:id="@+id/textView63"
+                    android:layout_width="192dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView57"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="473dp"
+                    android:text="'IBM ThinkServer TS150 Tower Server With Max. Processor 1 x Intel Xeon E3 (Quad Core) E3-1225 v5&quot;(3.3 GHz /Cache 8 MB)... / STD MEMORY 8GB X 1/ MAX. MEMORY 64GB 4 Slots/HARD DRIVE 1 X 1TB SATA 3.5&quot; 7.2k SATA / STD. HDD BAY/ 3 bay MAX. HDD BAY upto 4 x 3.5&quot; +1 x 2.5&quot; bay/ OPTICAL Multi Burner/Integrated RAID 0,1,5,10 (RAID 121i).'" />
+
+                <TextView
+                    android:id="@+id/textView69"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/textView47"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="729dp"
+                    android:layout_marginEnd="87dp"
+                    android:layout_marginRight="87dp"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/textView67"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView59"
+                    android:layout_marginStart="67dp"
+                    android:layout_marginLeft="67dp"
+                    android:layout_marginTop="493dp"
+                    android:layout_toEndOf="@+id/textView58"
+                    android:layout_toRightOf="@+id/textView58"
+                    android:text="10 Jul 2019" />
+
+
+                <TextView
+                    android:id="@+id/textView68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView60"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="234dp"
+                    android:layout_toEndOf="@+id/textView58"
+                    android:layout_toRightOf="@+id/textView58"
+                    android:text="Rs. 45, 000" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

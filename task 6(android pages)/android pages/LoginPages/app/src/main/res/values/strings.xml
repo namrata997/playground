@@ -108,4 +108,5 @@
     <string name="title_activity_form1">Form1</string>
     <string name="title_activity_formone">Formone</string>
     <string name="title_activity_formtwo">Formtwo</string>
+    <string name="title_activity_review">Review</string>
 </resources>
