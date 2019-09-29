@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import com.example.myapplication.DelegatePackage.DelegateList;
@@ -27,11 +28,25 @@ public class MainActivity extends AppCompatActivity implements DelegateList {
 
     @Override
     public void DelegateInteconnection(Request request) {
-        BlankFragment2 blankFragmenta=new BlankFragment2();
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.ad,blankFragmenta);
-        fragmentTransaction.commit();
+
+//        int newConfig=this.getResources().getConfiguration().orientation;
+//        if (newConfig== Configuration.ORIENTATION_PORTRAIT) {
+//            BlankFragment1 blankFragment = new BlankFragment1();
+//            blankFragment.SetDelegateLink(this);
+//            FragmentManager fragmentManager = getSupportFragmentManager();
+//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//            fragmentTransaction.replace(R.id.ad, blankFragment);
+//            fragmentTransaction.addToBackStack(null);
+//            fragmentTransaction.commit();
+//        }
+//        else {
+            BlankFragment2 blankFragmenta = new BlankFragment2();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.ad, blankFragmenta);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+//        }
     }
 }
 
