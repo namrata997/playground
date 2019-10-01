@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/ad"
-        android:name="com.example.myapplication.BlankFragment1"
+        class="com.example.myapplication.BlankFragment1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"

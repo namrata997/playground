@@ -46,6 +46,8 @@ class listadapter extends BaseAdapter {
         in.setText(String.valueOf(request.getRequestno()));
         TextView bb = (TextView) im.findViewById(R.id.textView4);
         bb.setText(String.valueOf(request.getStatus()));
+        TextView cc = (TextView) im.findViewById(R.id.textView8);
+        cc.setText(String.valueOf(request.getDate()));
         return im;
     }
 }

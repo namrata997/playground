@@ -29,24 +29,27 @@ public class MainActivity extends AppCompatActivity implements DelegateList {
     @Override
     public void DelegateInteconnection(Request request) {
 
-//        int newConfig=this.getResources().getConfiguration().orientation;
-//        if (newConfig== Configuration.ORIENTATION_PORTRAIT) {
-//            BlankFragment1 blankFragment = new BlankFragment1();
-//            blankFragment.SetDelegateLink(this);
-//            FragmentManager fragmentManager = getSupportFragmentManager();
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//            fragmentTransaction.replace(R.id.ad, blankFragment);
-//            fragmentTransaction.addToBackStack(null);
-//            fragmentTransaction.commit();
-//        }
-//        else {
+
+
+        int newConfig=this.getResources().getConfiguration().orientation;
+        if (newConfig== Configuration.ORIENTATION_PORTRAIT) {
+            BlankFragment2 blankFragment = new BlankFragment2();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.ad, blankFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+            blankFragment.setdatafetching(request);
+        }
+        else {
             BlankFragment2 blankFragmenta = new BlankFragment2();
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.ad, blankFragmenta);
+            fragmentTransaction.replace(R.id.fragment4, blankFragmenta);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
-//        }
+            blankFragmenta.setdatafetching(request);
+        }
     }
 }
 

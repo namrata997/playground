@@ -20,10 +20,20 @@ import java.util.ArrayList;
 
 
 public class BlankFragment1 extends Fragment {
-
+    private BlankFragment1Listener listener;
     ListView listView;
     private View view;
     DelegateList delegateList;
+
+
+
+
+    public interface BlankFragment1Listener{
+        void onInputASent(CharSequence input );
+    }
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,22 +44,28 @@ public class BlankFragment1 extends Fragment {
         listView =view.findViewById(R.id.list);
         final ArrayList<Request> mode = new ArrayList<>();
 
-        final Request request=new Request();
+        Request request=new Request();
         request.setRequestno("pur-056-2019");
         request.setStatus(Listitems.draft);
+        request.setDate("25jun2019");
         mode.add(request);
 
+        request=new Request();
         request.setRequestno("pur-057-2019");
         request.setStatus(Listitems.awaiting);
+        request.setDate("26jun2019");
         mode.add(request);
 
+        request=new Request();
         request.setRequestno("pur-058-2019");
         request.setStatus(Listitems.reject);
+        request.setDate("27jun2019");
         mode.add(request);
 
-
+        request=new Request();
         request.setRequestno("pur-059-2019");
         request.setStatus(Listitems.approval);
+        request.setDate("28jun2019");
         mode.add(request);
 
 
@@ -66,6 +82,20 @@ public class BlankFragment1 extends Fragment {
                 }
             }
         });
+
+//        listView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                BlankFragment2 blankFragment2=new BlankFragment2();
+//                Bundle args=new Bundle();
+//                args.putString("key","some value");
+//                blankFragment2.setArguments(args);
+//                getFragmentManager()
+//                .beginTransaction()
+//                        .replace(R.id.ad,blankFragment2)
+//                .commit();
+//            }
+//        });
 
         return view;
     }
