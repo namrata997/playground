@@ -4,24 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait">
 
-    <fragment
-        android:id="@+id/ad"
-        class="com.example.myapplication.BlankFragment1"
-        android:layout_width="358dp"
+    <FrameLayout
+        android:id="@+id/fa"
+        android:layout_width="350dp"
         android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_blank_fragment1" />
+        android:layout_weight="0.6"
+        android:screenOrientation="portrait">
 
-    <fragment
-        android:id="@+id/fragment4"
-        android:name="com.example.myapplication.Blank"
-        android:layout_width="wrap_content"
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/f2"
+        android:layout_width="350dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        tools:layout="@layout/fragment_blank" />
-
-
+        android:screenOrientation="portrait"></FrameLayout>
 </LinearLayout>
