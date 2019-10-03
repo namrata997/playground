@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements DelegateList {
         BlankFragment1 blankFragment = new BlankFragment1();
         blankFragment.SetDelegateLink(this);
         FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.popBackStackImmediate(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.fa, blankFragment);
         fragmentTransaction.commit();
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements DelegateList {
         } else if (newConfig == Configuration.ORIENTATION_LANDSCAPE){
             BlankFragment2 blankFragment = new BlankFragment2();
             FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.popBackStackImmediate(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.add(R.id.f2, blankFragment);
             fragmentTransaction.addToBackStack(null);

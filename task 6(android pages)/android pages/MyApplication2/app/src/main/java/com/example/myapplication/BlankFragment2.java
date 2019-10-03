@@ -32,11 +32,11 @@ public class BlankFragment2 extends Fragment {
 
 
 
-
+    if (request!=null) {
         number.setText(request.getRequestno());
         date.setText(request.getDate());
         statues.setText(request.getStatus().toString());
-
+    }
 
 
         imageView=view.findViewById(R.id.imageView2);
