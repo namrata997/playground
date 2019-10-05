@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AttachFilesFragment"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/holder"
+        android:layout_width="412dp"
+        android:layout_height="127dp"
+        android:background="#F0F0F0"
+        android:textColor="#F0F0F0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ATTACHMENTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="16dp"
+        android:text="ATTACHMENTS"
+        android:textColor="#505050"
+        app:layout_constraintStart_toStartOf="@+id/holder"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contents"
+        android:layout_width="190dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="32dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        android:textColor="#747474"
+        app:layout_constraintStart_toStartOf="@+id/holder"
+        app:layout_constraintTop_toBottomOf="@+id/ATTACHMENTS" />
+
+    <TextView
+        android:id="@+id/attachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="80dp"
+        android:text="ATTACH FILES"
+        app:layout_constraintStart_toEndOf="@+id/contents"
+        app:layout_constraintTop_toTopOf="@+id/holder" />
+
+    <ImageView
+        android:id="@+id/attachmentimage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginLeft="176dp"
+        android:layout_marginBottom="36dp"
+        android:src="@drawable/attach"
+        app:layout_constraintBottom_toTopOf="@+id/attachment"
+        app:layout_constraintStart_toEndOf="@+id/ATTACHMENTS" />
+
+    <TextView
+        android:id="@+id/savedraft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="280dp"
+        android:text="SAVE DRAFT"
+        android:textColor="#595959"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/holder" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="103dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginLeft="122dp"
+        android:layout_marginTop="258dp"
+        android:background="@drawable/button_bluecolour"
+        android:text="NEXT ->"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintStart_toEndOf="@+id/savedraft"
+        app:layout_constraintTop_toBottomOf="@+id/holder" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="276dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="118dp"
+        android:background="@drawable/boader_box"
+        android:text="abc003745gb9023.doc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/holder" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="276dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/boader_box"
+        android:text="Lorem ipsum dolor sit amet, consectetur…"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="63dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="118dp"
+        android:background="@drawable/boader_box"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/holder" />
+
+    <ImageView
+        android:id="@+id/dustbinbox"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/dust"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="@+id/textView11" />
+</androidx.constraintlayout.widget.ConstraintLayout>
