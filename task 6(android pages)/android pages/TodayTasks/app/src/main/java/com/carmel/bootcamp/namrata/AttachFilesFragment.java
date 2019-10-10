@@ -26,11 +26,7 @@ public class AttachFilesFragment extends Fragment   {
 
         imageView=view.findViewById(R.id.attachmentimage);
 
-//        filename=view.findViewById(R.id.upload);
-//        filecapacity=view.findViewById(R.id.textView3);
-//        decripition=view.findViewById(R.id.textView4);
-
-        return view;
+    return view;
 
     }
 
