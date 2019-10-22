@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+
+            <script src="//code.angularjs.org/1.1.3/angular.js"></script>
+             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="style5.css">
+            <script src="app8.js"></script>
+
+  </head>
+  <body data-rsssl=1>
+        <div class="dropdown">
+                <img src="burger.png" class=" dropdown-toggle" data-toggle="dropdown" id="scream" width="20" height="20">  
+                  <ul class="dropdown-menu">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ADD</a></li>
+                    <li><a href="#">DISPLAY</a></li>
+                  </ul>
+                </div>
+
+                <!-- <div id="catPic"></div> -->
+
+    <canvas id="myCanvas" width="1000" height="800" style="background-color: gray;"></canvas>
+    <script>
+      function loadImages(sources, callback) {
+        var images = {};
+        var loadedImages = 0;
+        var numImages = 0;
+        // get num of sources
+        for(var src in sources) {
+          numImages++;
+        }
+        for(var src in sources) {
+          images[src] = new Image();
+          images[src].onload = function() {
+            if(++loadedImages >= numImages) {
+              callback(images);
+            }
+          };
+          images[src].src = sources[src];
+        }
+      }
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      var sources = {
+        darthVader: 'emptyimage.jpeg',
+        yoda: 'sleep.png'
+      };
+
+      loadImages(sources, function(images) {
+        context.drawImage(images.darthVader, 10, 10,800, 700);
+       context.drawImage(images.yoda, 850, 55, 93, 104);
+      });
+
+    </script>
+
+
+  </body>
+</html>      
