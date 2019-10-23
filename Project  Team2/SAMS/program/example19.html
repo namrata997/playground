@@ -7,33 +7,15 @@
       margin: 0px;
       padding: 0px;
     }
-    
   </style>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
   <script src="//code.angularjs.org/1.1.3/angular.js"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script> 
   <link rel="stylesheet" href="style5.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="app8.js"></script>
-  <style>
-      #draggable { width: 40px; height: 40px; padding: 0.5em; }
-      </style>
-      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <script>
-      $( function() {
-        $( "#draggable" ).draggable();
-      } );
-    
-      $( function() {
-        $( ".selector" ).draggable( "disable" );
-      } );
-      </script>
+  <script src="app9.js"></script>
 
 </head>
 
@@ -41,76 +23,17 @@
   <div class="dropdown">
     <img src="burger.png" class=" dropdown-toggle" data-toggle="dropdown" id="scream" width="20" height="20">
     <ul class="dropdown-menu">
-      <li><a href="example19.html">HOME</a></li>
-      <li><a href="#">ADD</a></li>
+      <li><a href="#">HOME</a></li>
+      <li><a href="example18.html">ADD</a></li>
       <li><a href="#">DISPLAY</a></li>
     </ul>
-  </div> 
-  <div id="draggable" class='drg_box'>
-      <img src="go.png" alt="Trulli" width="40" height="40">
-    </div>
-  <canvas id="myCanvas" width="700" height="700" style="background-color: gray;"></canvas>
-  <button  id=b1>Reset</button><button  id=b2>save </button>  <br>
-  <div id=d1 style="position: absolute;"></div>
+  </div>
+  <!-- <div id="mydiv">
+      <img src="sleep.png" alt="Trulli" width="40" height="40">
+    </div> -->
+  <canvas id="myCanvas" width="1000" height="800" style="background-color: gray;"></canvas>
+  <!-- <button class="save-button">save-button</button> -->
  
-   
-</div>
-<script>
-$(document).ready(function() {
-      ////////////////
-$( "#draggable" ).draggable({
-});
-//////
-$("#b1").click(function(){
-$( ".drg_box" ).draggable( "enable");
-$('#d1').html("Status : Enable ");
-})
-//////////////
-//////
-$("#b2").click(function(){
-$( ".drg_box" ).draggable( "disable");
-$('#d1').html("Status : Disable ");
-})
-
-/////
-})
-</script>
-  <!-- <button onclick = "myGeeks()">  Disable image dragging</button>   -->
-  <!-- <img id="img" src= 
-"https://contribute.geeksforgeeks.org/wp-content/uploads/gfg-39.png"> 
-   
-  <script type="text/javascript"> 
-      function myGeeks() { 
-          document.getElementById('img').draggable = false; 
-      } 
-  </script>  -->
-  <!-- <div id="draggable" class='drg_box'>
-      <p>Drag me around</p>
-    </div>
-    <br><br><br><br><br><br><br>
-    <button  id=b1>Enable</button><button  id=b2>Disable </button>  <br>
-    <div id=d1 style="position: absolute;"></div>
-    <script>
-        $(document).ready(function() {
-            ////////////////
-        $( "#draggable" ).draggable({
-        });
-        //////
-        $("#b1").click(function(){
-        $( ".drg_box" ).draggable( "enable");
-        $('#d1').html("Status : Enable ");
-        })
-        //////////////
-        //////
-        $("#b2").click(function(){
-        $( ".drg_box" ).draggable( "disable");
-        $('#d1').html("Status : Disable ");
-        })
-        
-        /////
-        })
-        </script> -->
-        
   <script>
     function loadImages(sources, callback) {
       var images = {};
@@ -139,12 +62,13 @@ $('#d1').html("Status : Disable ");
     };
 
     loadImages(sources, function (images) {
-      context.drawImage(images.darthVader, 10, 10, 600, 600);
+      context.drawImage(images.darthVader, 10, 10, 800, 700);
       //  context.drawImage(images.yoda, 850, 55, 93, 104);
     });
 
   </script>
-<script>
+
+  <script>
     //Make the DIV element draggagle:
     dragElement(document.getElementById("mydiv"));
 
