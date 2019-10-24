@@ -20,6 +20,7 @@
 </head>
 
 <body data-rsssl=1>
+  <div>
   <div class="dropdown">
     <img src="burger.png" class=" dropdown-toggle" data-toggle="dropdown" id="scream" width="20" height="20">
     <ul class="dropdown-menu">
@@ -28,10 +29,12 @@
       <li><a href="#">DISPLAY</a></li>
     </ul>
   </div>
+  <button style="background-color: #32BDD2;color: #fff;"onclick="init()">Add pod</button>
   <!-- <div id="mydiv">
       <img src="sleep.png" alt="Trulli" width="40" height="40">
     </div> -->
-  <canvas id="myCanvas" width="1000" height="800" style="background-color: gray;"></canvas>
+  </div>
+  <canvas id="myCanvas" width="600" height="600" style="background-color: gray;"></canvas>
   <!-- <button class="save-button">save-button</button> -->
  
   <script>
@@ -62,7 +65,7 @@
     };
 
     loadImages(sources, function (images) {
-      context.drawImage(images.darthVader, 10, 10, 800, 700);
+      context.drawImage(images.darthVader, 10, 10, 500, 500);
       //  context.drawImage(images.yoda, 850, 55, 93, 104);
     });
 
@@ -113,7 +116,12 @@
       }
     }
   </script>
+<script>
+    function init() {
+        location.replace("example18.html");
+    }
 
+</script>
 </body>
 
 </html>

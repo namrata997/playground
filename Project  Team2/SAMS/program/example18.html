@@ -16,9 +16,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <link rel="stylesheet" href="style5.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="style6.css">
   <script src="app8.js"></script>
   <style>
       #draggable { width: 40px; height: 40px; padding: 0.5em; }
@@ -37,7 +39,8 @@
 
 </head>
 
-<body data-rsssl=1>
+<body data-rsssl=1 ng-app="AngularshowhideApp">
+  <div>
   <div class="dropdown">
     <img src="burger.png" class=" dropdown-toggle" data-toggle="dropdown" id="scream" width="20" height="20">
     <ul class="dropdown-menu">
@@ -46,11 +49,47 @@
       <li><a href="#">DISPLAY</a></li>
     </ul>
   </div> 
-  <div id="draggable" class='drg_box'>
-      <img src="go.png" alt="Trulli" width="40" height="40">
-    </div>
-  <canvas id="myCanvas" width="700" height="700" style="background-color: gray;"></canvas>
-  <button  id=b1>Reset</button><button  id=b2>save </button>  <br>
+  <script>
+      var app = angular.module("AngularshowhideApp", []);
+      app.controller('showhidectrl', function ($scope) {
+      $scope.showval = true;
+      $scope.hideval = false;
+      $scope.isShowHide = function (param) {
+      if (param == "show") {
+      $scope.showval = true;
+      $scope.hideval = true;
+      }
+      else if (param == "hide") {
+      $scope.showval = false;
+      $scope.hideval = false;
+      }
+      else {
+      $scope.showval = true;
+      $scope.hideval = false;
+      }
+      }
+      });
+      </script>
+
+    <div ng-controller="showhidectrl">
+        <input type="button" ng-click="isShowHide('show')" value="ADD"> 
+        <br />
+        <!--Show Div Based on showval-->
+        <div ng-show="showval"><div id="draggable" class='drg_box'>
+            <div class="popup" onclick="myFunction()"> <img src="go.png" alt="Trulli" width="40" height="40">
+                <span class="popuptext" id="myPopup"><img src="sleepingpod.jpg" alt="Trulli" width="45" height="45">Single Bed Pod
+                  <input type="button" id=b1 style="background-color: #32BDD2; " value="move"><input type="button" ng-click="isShowHide('hide')" value="Delete">
+                </span>
+              </div>
+          </div></div><br />
+        <!--Hide Div Based on showval-->
+        <div ng-hide="hideval"></div>
+        </div>
+    <input type="button"  id=b2 style="background-color: #32BDD2; width: 10; height: 10;" value="save" onclick="storeGuess(event)">
+  </div>
+ 
+  <canvas id="myCanvas" width="500" height="500" style="background-color: gray;"></canvas>
+   <br>
   <div id=d1 style="position: absolute;"></div>
  
    
@@ -75,41 +114,7 @@ $('#d1').html("Status : Disable ");
 /////
 })
 </script>
-  <!-- <button onclick = "myGeeks()">  Disable image dragging</button>   -->
-  <!-- <img id="img" src= 
-"https://contribute.geeksforgeeks.org/wp-content/uploads/gfg-39.png"> 
-   
-  <script type="text/javascript"> 
-      function myGeeks() { 
-          document.getElementById('img').draggable = false; 
-      } 
-  </script>  -->
-  <!-- <div id="draggable" class='drg_box'>
-      <p>Drag me around</p>
-    </div>
-    <br><br><br><br><br><br><br>
-    <button  id=b1>Enable</button><button  id=b2>Disable </button>  <br>
-    <div id=d1 style="position: absolute;"></div>
-    <script>
-        $(document).ready(function() {
-            ////////////////
-        $( "#draggable" ).draggable({
-        });
-        //////
-        $("#b1").click(function(){
-        $( ".drg_box" ).draggable( "enable");
-        $('#d1').html("Status : Enable ");
-        })
-        //////////////
-        //////
-        $("#b2").click(function(){
-        $( ".drg_box" ).draggable( "disable");
-        $('#d1').html("Status : Disable ");
-        })
-        
-        /////
-        })
-        </script> -->
+ 
         
   <script>
     function loadImages(sources, callback) {
@@ -133,13 +138,27 @@ $('#d1').html("Status : Disable ");
     var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
 
+    guessX = 0; //stores user's click on canvas
+    guessY = 0; //stores user's click on canvas
+    function storeGuess(event) {
+    var x = event.offsetX;
+    var y = event.offsetY;
+    guessX = x;
+    guessY = y;
+    console.log("x coords: " + guessX + ", y coords: " + guessY);
+    
+}
+
+
+
+
     var sources = {
       darthVader: 'emptyimage.jpeg',
       // yoda: 'sleep.png'
     };
 
     loadImages(sources, function (images) {
-      context.drawImage(images.darthVader, 10, 10, 600, 600);
+      context.drawImage(images.darthVader, 10, 10, 400, 400);
       //  context.drawImage(images.yoda, 850, 55, 93, 104);
     });
 
@@ -189,6 +208,15 @@ $('#d1').html("Status : Disable ");
       }
     }
   </script>
+
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
 
 </body>
 
