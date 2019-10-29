@@ -17,11 +17,11 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script> 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="style5.css">
   <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
   <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
   <link rel="stylesheet" href="style6.css">
-  <script src="app15.js"></script>
   <script src="app14.js"></script>
 
 
@@ -109,9 +109,9 @@
         <br />
         <!--Show Div Based on showval-->
         <div ng-show="showval"><div id="draggable" class='drg_box' id="myDIV" ><div id="myDIV" class="mystyle"></div>
-            <div class="popup" onclick="myFunction()"> <img src="go.png" alt="Trulli" width="40" height="40" id="do">
-                <span class="popuptext" id="myPopup"><img src="sleepingpod.jpg" alt="Trulli" width="45" height="45">Single Bed Pod
-                  <input type="button" id=b1 style="background-color: #32BDD2; " value="move"><input type="button"  id="btnConfirm" value="Delete">
+            <div class="popup" onclick="myFunction()" >  <img src="dustpin.png" alt="Trulli" width="20" height="20" style="float: right;" onclick="myFunction()" id="img" ><img src="go.png" alt="Trulli" width="40" height="40" id="do">
+                <span class="popuptext" id="myPopup"><img src="sleepingpod.jpg" alt="Trulli" width="45" height="45" >Single Bed Pod
+                  <input type="button" id=b1 style="background-color: #32BDD2; " value="move">
                 </span>
               </div>
           </div></div><br />
@@ -256,7 +256,12 @@ $('#d1').html("Status : Disable ");
       }
     // }
   </script>
-
+<script type="text/javascript">
+	$(document).on('click','#img',function(){
+    $('#do').remove();
+    $('#img').remove();
+	});
+	</script>
 
 <script>
 // When the user clicks on div, open the popup
