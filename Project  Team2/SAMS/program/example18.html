@@ -23,6 +23,11 @@
   <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
   <link rel="stylesheet" href="style6.css">
   <script src="app14.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="style21.css">
+<script src="app21.js"></script>
 
 
   <script>
@@ -48,7 +53,7 @@
         $( ".selector" ).draggable( "disable" );
       } );
       </script>
-<script>
+<!-- <script>
     function imgloop()
     {
       var ar = [];
@@ -67,10 +72,12 @@
   
     }
       
-    </script>
+    </script> -->
 </head>
 
 <body data-rsssl=1 ng-app="AngularshowhideApp">
+
+   
   <div>
   <div class="dropdown">
     <img src="burger.png" class=" dropdown-toggle" data-toggle="dropdown" id="scream" width="20" height="20">
@@ -80,6 +87,11 @@
       <li><a href="#">DISPLAY</a></li>
     </ul>
   </div> 
+
+  <button id="add-object">Add Object</button>
+  
+  <div id="zone" >
+   
   <!-- <script>
       var app = angular.module("AngularshowhideApp", []);
       app.controller('showhidectrl', function ($scope) {
@@ -105,13 +117,12 @@
     <div ng-controller="showhidectrl">
         <div id="elementid">
           </div>
-        <input type="button" ng-click="isShowHide('show')" value="ADD" onclick="imgloop();"> 
         <br />
         <!--Show Div Based on showval-->
         <div ng-show="showval"><div id="draggable" class='drg_box' id="myDIV" ><div id="myDIV" class="mystyle"></div>
-            <div class="popup" onclick="myFunction()" >  <img src="dustpin.png" alt="Trulli" width="20" height="20" style="float: right;" onclick="myFunction()" id="img" ><img src="go.png" alt="Trulli" width="40" height="40" id="do">
+            <div class="popup" onclick="myFunction()" >  <img src="go.png" alt="Trulli" width="40" height="40" id="do">
                 <span class="popuptext" id="myPopup"><img src="sleepingpod.jpg" alt="Trulli" width="45" height="45" >Single Bed Pod
-                  <input type="button" id=b1 style="background-color: #32BDD2; " value="move">
+                  <input type="button" id=b1 style="background-color: #32BDD2; " value="move"><img src="dustpin.png" alt="Trulli" width="20" height="20" style="float: right;" onclick="myFunction()" id="img" >
                 </span>
               </div>
           </div></div><br />
@@ -119,15 +130,17 @@
         <div ng-hide="hideval"></div>
         </div>
     <input type="button"  id=b2 style="background-color: #32BDD2; width: 10; height: 10;" value="save"  onclick="showCoords(event)">
-   
+    <canvas id="myCanvas" width="500" height="500" style="background-color: gray; "></canvas>
   </div>
  
-  <canvas id="myCanvas" width="500" height="500" style="background-color: gray;"></canvas>
+  
+  
    <br>
   <div id=d1 style="position: absolute;"></div>
   <br>
    <p id="demo"></p>
    
+</div>
 </div>
 <script>
   function showCoords(event) {
@@ -260,6 +273,7 @@ $('#d1').html("Status : Disable ");
 	$(document).on('click','#img',function(){
     $('#do').remove();
     $('#img').remove();
+    $('#myPopup').remove();
 	});
 	</script>
 
