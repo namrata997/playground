@@ -1,0 +1,30 @@
+#myCanvas{
+
+    background-image: url("http://www.sdlcustomhomes.com/wp-content/uploads/2013/11/2395jd-f1.jpg");
+   
+    border:1px solid black;
+       background-size:     cover;                      
+        background-repeat:   no-repeat;
+        background-position: center center;
+}
+.dropdown{
+ float: left;
+  }
+.idss{
+    float: right;
+}
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: lightblue;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+  }
+  
+  #mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    /* background-color: #2196F3; */
+    color: #fff;
+  }
