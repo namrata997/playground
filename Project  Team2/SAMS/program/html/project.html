@@ -6,11 +6,17 @@
 <!-- <script src="//code.angularjs.org/snapshot/angular.min.js"></script> -->
 <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 <link rel="stylesheet" href="../css/project.css">
-<!-- <script src="project.js"></script> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../js/project.js"></script>
 </head>
 
 <body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/blitzer/jquery-ui.css" rel="stylesheet">
    <div>
         <div class="dropdown">
                 <img src="../image/burger.png" class=" dropdown-toggle" data-toggle="dropdown" id="scream" width="20" height="20">
@@ -29,10 +35,21 @@
     <br>
         <h1>SAMS</h1>
         <div>
-            <div id="mydiv">
-                <div id="mydivheader"> <img src="../image/go.png" width="20" height="20" > </div>
+            <div id="draggable" class='drg_box'>
+                <div id="mydivheader" class="popup" onclick="myFunction()"> <img src="../image/go.png" width="20" height="20"  class="ui-widget-header "  id="draggable"> 
+                <span class="popuptext" id="myPopup"><button  id=b1>move</button><button  id=b2  onclick="showCoords(event)">save </button> </span>
               </div>
-    <canvas id="myCanvas" width="500" height="500" style="background-color: wheat; "></canvas>
+              </div>
+    <canvas id="myCanvas" width="500" height="500" style="background-color: wheat; " >
+        <img src="http://www.sdlcustomhomes.com/wp-content/uploads/2013/11/2395jd-f1.jpg" height="600" width="500" alt="dragon"></canvas>
+      
+    <p id="demo"></p>
+     <br>
+    <div id=d1 style="position: absolute;"></div>
+    <!-- <button  id=b2 onclick="showCoords(event)">save</button>
+    <button  id=b1 >Move</button> -->
+    <!-- <p>X:<span id="xa"></span></p>
+<p>Y:<span id="yb"></span></p> -->
     </div>
   <script>
   var drawGrid = function(w, h, id) {
@@ -53,7 +70,7 @@
     };
     drawGrid(500, 500, "myCanvas"); 
   </script>
- <script>
+ <!-- <script>
     dragElement(document.getElementById("mydiv"));
     
     function dragElement(elmnt) {
@@ -87,8 +104,50 @@
         document.onmousemove = null;
       }
     }
+    </script> -->
+
+<script>
+    function showCoords(event) {
+      var x = event.clientX;
+      var y = event.clientY;
+      var coords = "X coords: " + x + ", Y coords: " + y;
+      document.getElementById("demo").innerHTML = coords;
+    }
     </script>
- 
+
+<script>
+    function myFunction() {
+      alert(document.getElementById("myTable").rows[0].cells.item(0).innerHTML);
+    }
+    </script>
+<script>
+    $(document).ready(function() {
+            ////////////////
+    $( "#draggable" ).draggable({
+    });
+    //////
+    $("#b1").click(function(){
+    $( ".drg_box" ).draggable( "enable");
+    $('#d1').html("Status : Enable ");
+    })
+    //////////////
+    //////
+    $("#b2").click(function(){
+    $( ".drg_box" ).draggable( "disable");
+    $('#d1').html("Status : Disable ");
+    })
+    
+    /////
+    })
+    </script>
+
+<script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
 
 </body>
 
